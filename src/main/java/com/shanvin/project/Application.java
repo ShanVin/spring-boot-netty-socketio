@@ -25,7 +25,6 @@ public class Application implements ApplicationRunner {
 
 	public static void main(String[] args) {
 		System.setProperty("logPath", getLogPath(args));
-		System.setProperty("log4j2.contextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
 		SpringApplication application = new SpringApplication(Application.class);
 		application.addListeners(new ApplicationPidFileWriter(getPidFile(args)));
 		application.run(args);
