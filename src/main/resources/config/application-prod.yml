@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-boot-netty-socketio
+  messages:
+    encoding: UTF-8
+
+server:
+  port: 9051
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+    basedir: ../tomcat/${server.port}
+
+socketio:
+  bossThreads: 0
+  workerThreads: 0
+  useLinuxNativeEpoll: false
+  pingTimeout: 60000
+  pingInterval: 25000
+  maxHttpContentLength: 65536
+  port: 9061
+  tcpKeepAlive: true
+  reuseAddress: true
